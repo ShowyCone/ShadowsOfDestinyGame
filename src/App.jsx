@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { SimonSays } from './games/SimonSays'
 import './App.css'
+import mainTheme from './audio/main-theme.mp3'
 
 function App() {
   const gameContainerRef = useRef(null)
@@ -20,15 +21,17 @@ function App() {
   }
 
   return (
-    <main>
-      <div ref={gameContainerRef} id="game-container">
-        <SimonSays />
-      </div>
+    <>
+      <main>
+        <div ref={gameContainerRef} id="game-container">
+          <SimonSays />
+        </div>
 
-      <button id="fullscreen-button" onClick={handleFullscreen}>
-        Pantalla completa
-      </button>
-    </main>
+        <button id="fullscreen-button" onClick={handleFullscreen}>
+          Pantalla completa
+        </button>
+      </main>
+    </>
   )
 }
 
