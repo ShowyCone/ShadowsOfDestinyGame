@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Playfair+Display:wght@400;500&display=swap');
+
+:root {
+  --color-fondo: #020113;
+  --color-texto: #e6e6e6;
+  --color-destacado: #7b241c;
+  --color-enlace: #b7950b;
+  --color-borde: #3d3d3d;
+  --color-botones: #4a235a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-fondo);
+}
+
+#game-container {
+  width: 1280px;
+  height: 720px;
+  background-color: #000;
+  transform: scale(0.8);
+  margin: -50px auto;
+  font-family: 'Cinzel Decorative', serif;
+}
