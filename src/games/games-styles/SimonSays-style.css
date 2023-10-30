@@ -5,6 +5,7 @@
   --color-enlace: #b7950b;
   --color-borde: #3d3d3d;
   --color-botones: #4a235a;
+  --text-shadow-border: -8px 0 black, 0 8px black, 8px 0 black, 0 -8px black;
 }
 
 * {
@@ -28,7 +29,7 @@
 
 .SimonSays-title {
   color: var(--color-texto);
-  text-shadow: -8px 0 black, 0 8px black, 8px 0 black, 0 -8px black;
+  text-shadow: var(--text-shadow-border);
   font-weight: 800;
   font-size: 5em;
   z-index: 100;

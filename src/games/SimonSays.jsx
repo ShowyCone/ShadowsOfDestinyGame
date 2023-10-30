@@ -1,12 +1,10 @@
 import { SimonSaysButtons } from './games-components/SimonSaysButtons'
 import './games-styles/SimonSays-style.css'
 import border from '../assets/SimonSays-border.png'
-import mainTheme from '../audio/main-theme.mp3'
 
 export const SimonSays = () => {
   return (
     <div className="SimonSays-container">
-      <audio src={mainTheme} autoPlay loop hidden />
       <h1 className="SimonSays-title">SIMON SAYS</h1>
       <div className="SimonSays-container-game">
         <div className="SimonSays-button-container">

@@ -19,6 +19,11 @@ body {
   background-color: var(--color-fondo);
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 #game-container {
   width: 1280px;
   height: 720px;
@@ -26,4 +31,11 @@ body {
   transform: scale(0.8);
   margin: -50px auto;
   font-family: 'Cinzel Decorative', serif;
+}
+
+.button-fullscreen {
+  width: 250px;
+  height: 30px;
+  align-self: center;
+  z-index: 20;
 }

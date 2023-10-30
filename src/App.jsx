@@ -1,10 +1,15 @@
-import { useRef } from 'react'
+import { useRef, useEffect, useState } from 'react'
+import { Menu } from './views/Menu'
 import { SimonSays } from './games/SimonSays'
-import './App.css'
+import { Trivia } from './games/Trivia'
 import mainTheme from './audio/main-theme.mp3'
+import useSound from 'use-sound'
+import './App.css'
 
 function App() {
   const gameContainerRef = useRef(null)
+  const [screen, setScreen] = useState('Menu')
+  const [play] = useSound(mainTheme)
 
   const handleFullscreen = () => {
     const gameContainer = gameContainerRef.current
@@ -20,14 +25,20 @@ function App() {
     }
   }
 
+  const changeScreen = (newScreen) => {
+    setScreen(newScreen)
+  }
+
   return (
     <>
       <main>
         <div ref={gameContainerRef} id="game-container">
-          <SimonSays />
+          {screen === 'Menu' && <Menu changeScreen={changeScreen} />}
+          {screen === 'SimonSays' && <SimonSays changeScreen={changeScreen} />}
+          {screen === 'Trivia' && <Trivia changeScreen={changeScreen} />}
         </div>
 
-        <button id="fullscreen-button" onClick={handleFullscreen}>
+        <button className="button-fullscreen" onClick={handleFullscreen}>
           Pantalla completa
         </button>
       </main>

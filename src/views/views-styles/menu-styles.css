@@ -1,0 +1,51 @@
+.menu-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../assets/bg2-menu.jpg');
+  background-size: contain;
+}
+
+.menu-options-container {
+  width: 50%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  list-style: none;
+}
+
+.menu-options {
+  background: rgb(209, 185, 154);
+  background: radial-gradient(
+    circle,
+    rgba(209, 185, 154, 1) 18%,
+    rgba(111, 99, 87, 1) 51%,
+    rgba(47, 42, 39, 0.39539565826330536) 85%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  width: 450px;
+  height: 65px;
+  cursor: pointer;
+  font-size: 2em;
+  font-weight: bold;
+  color: #020113;
+}
+
+.menu-options:hover {
+  background: rgb(205, 144, 108);
+  background: radial-gradient(
+    circle,
+    rgba(205, 144, 108, 1) 18%,
+    rgba(111, 99, 87, 1) 51%,
+    rgba(47, 42, 39, 0.39539565826330536) 85%
+  );
+  transition: all 1s;
+}
