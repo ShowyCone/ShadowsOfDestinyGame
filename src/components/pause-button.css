@@ -1,0 +1,16 @@
+.pause-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background: #000000aa;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  border: solid 3px #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #e6e6e6;
+  cursor: pointer;
+}

@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from 'react'
 import { Menu } from './views/Menu'
 import { SimonSays } from './games/SimonSays'
 import { Trivia } from './games/Trivia'
+import { PauseButton } from './components/PauseButton'
 import mainTheme from './audio/main-theme.mp3'
 import useSound from 'use-sound'
 import './App.css'
@@ -33,6 +34,7 @@ function App() {
     <>
       <main>
         <div ref={gameContainerRef} id="game-container">
+          <PauseButton />
           {screen === 'Menu' && <Menu changeScreen={changeScreen} />}
           {screen === 'SimonSays' && <SimonSays changeScreen={changeScreen} />}
           {screen === 'Trivia' && <Trivia changeScreen={changeScreen} />}
